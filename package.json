@@ -17,7 +17,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "listener": "node services/listener/listener.js",
+    "listener:dev": "nodemon services/listener/listener.js",
+    "emitter": "node services/emitter/emitter.js",
+    "emitter:dev": "nodemon services/emitter/emitter.js",
+    "services": "concurrently \"npm run listener:dev\" \"npm run emitter:dev\"",
+    "test-crypto": "node test/test-crypto.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
@@ -26,10 +32,13 @@
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.1.5",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
     "uuid": "^13.0.0",
     "winston": "^3.19.0"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "nodemon": "^3.1.11"
   }
 }
