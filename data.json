@@ -1,0 +1,29 @@
+{
+  "names": [
+    "Rajesh Kumar", "Priya Sharma", "Amit Singh", "Deepika Patel", "Vikram Gupta", 
+    "Anita Verma", "Suresh Reddy", "Kavya Nair", "Rohit Agarwal", "Sneha Joshi",
+    "Arun Iyer", "Meera Kapoor", "Sanjay Mehta", "Pooja Rao", "Kiran Desai",
+    "Lakshmi Pillai", "Harish Chand", "Ritu Bansal", "Manoj Tiwari", "Sunita Malhotra",
+    "Vishal Shah", "Nisha Sinha", "Rakesh Yadav", "Shweta Bhatt", "Pravin Kumar",
+    "Geeta Mishra", "Naveen Jain", "Rashmi Pandey", "Ajay Kulkarni", "Divya Chopra",
+    "Sachin Ghosh", "Neha Arora", "Ramesh Saxena", "Pallavi Das", "Sunil Chawla",
+    "Archana Bose", "Mahesh Soni", "Richa Goyal", "Dinesh Lal", "Seema Aggarwal",
+    "Ravi Bajaj", "Shilpa Devi", "Ashok Gupta", "Usha Rani", "Vinod Khanna",
+    "Madhuri Jain", "Deepak Agrawal", "Swati Singh", "Mukesh Kumar", "Renu Sharma"
+  ],
+  "origins": [
+    "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Ahmedabad", "Chennai", "Kolkata", "Surat",
+    "Pune", "Jaipur", "Lucknow", "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal", "Visakhapatnam",
+    "Pimpri-Chinchwad", "Patna", "Vadodara", "Ghaziabad", "Ludhiana", "Agra", "Nashik", "Faridabad",
+    "Meerut", "Rajkot", "Kalyan-Dombivali", "Vasai-Virar", "Varanasi", "Srinagar", "Aurangabad",
+    "Dhanbad", "Amritsar", "Navi Mumbai", "Allahabad", "Ranchi", "Howrah", "Coimbatore", "Jabalpur"
+  ],
+  "destinations": [
+    "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Ahmedabad", "Chennai", "Kolkata", "Surat",
+    "Pune", "Jaipur", "Lucknow", "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal", "Visakhapatnam",
+    "Pimpri-Chinchwad", "Patna", "Vadodara", "Ghaziabad", "Ludhiana", "Agra", "Nashik", "Faridabad",
+    "Meerut", "Rajkot", "Kalyan-Dombivali", "Vasai-Virar", "Varanasi", "Srinagar", "Aurangabad",
+    "Dhanbad", "Amritsar", "Navi Mumbai", "Allahabad", "Ranchi", "Howrah", "Coimbatore", "Jabalpur",
+    "Madurai", "Gwalior", "Vijayawada", "Jodhpur", "Raipur", "Kota", "Guntur", "Hubli-Dharwad"
+  ]
+}
