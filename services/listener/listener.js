@@ -33,8 +33,7 @@ class ListenerService {
     this.setupRoutes();
     this.setupSocketHandlers();
   }
-
-  // Setup Express routes for health check and statistics
+  
   setupRoutes() {
     this.app.use(express.json());
     
@@ -75,7 +74,6 @@ class ListenerService {
     });
   }
 
-  // Setup Socket.IO event handlers
   setupSocketHandlers() {
     this.io.on('connection', (socket) => {
       logger.info(`New emitter connected: ${socket.id} from ${socket.handshake.address}`);
@@ -102,7 +100,6 @@ class ListenerService {
     });
   }
 
-  // Process encrypted message stream from emitter
   async handleMessageStream(socket, data) {
     const startTime = Date.now();
     const emitterInfo = this.connectedEmitters.get(socket.id);
@@ -181,14 +178,11 @@ class ListenerService {
     }
   }
 
-  // Process a single encrypted message
   async processEncryptedMessage(encryptedMessage, index) {
     try {
-      // Step 1: Decrypt the message
       const decryptedString = decrypt(encryptedMessage);
       const messageWithKey = JSON.parse(decryptedString);
       
-      // Step 2: Validate data integrity using secret_key
       const isValid = validateSecretKey(messageWithKey);
       
       if (!isValid) {
@@ -196,10 +190,8 @@ class ListenerService {
         return { valid: false, saved: false, reason: 'Invalid secret key' };
       }
 
-      // Step 3: Extract original message (without secret_key)
       const { secret_key, ...originalMessage } = messageWithKey;
       
-      // Step 4: Add timestamp and save to MongoDB
       const savedRecord = await TimeSeriesData.addRecord(originalMessage);
       
       logger.debug(`Successfully saved message ${index}:`, {
@@ -225,14 +217,11 @@ class ListenerService {
     }
   }
 
-  // Start the listener service
   async start() {
     try {
-      // Connect to MongoDB
       await connectDB();
       logger.info('MongoDB connected successfully');
 
-      // Start the server
       this.server.listen(this.port, () => {
         logger.info(`Listener Service started on port ${this.port}`);
         logger.info(`Socket.IO server ready to accept connections`);
@@ -240,7 +229,6 @@ class ListenerService {
         logger.info(`Statistics available at http://localhost:${this.port}/stats`);
       });
 
-      // Setup graceful shutdown
       this.setupGracefulShutdown();
 
     } catch (error) {
@@ -249,7 +237,6 @@ class ListenerService {
     }
   }
 
-  // Setup graceful shutdown handlers
   setupGracefulShutdown() {
     const gracefulShutdown = () => {
       logger.info('Received shutdown signal, closing server gracefully...');
@@ -257,11 +244,9 @@ class ListenerService {
       this.server.close(() => {
         logger.info('HTTP server closed');
         
-        // Close all socket connections
         this.io.close(() => {
           logger.info('Socket.IO server closed');
           
-          // Close MongoDB connection
           require('mongoose').connection.close();
           logger.info('MongoDB connection closed');
           logger.info('Listener Service shut down complete');
@@ -269,7 +254,6 @@ class ListenerService {
         });
       });
 
-      // Force close after 10 seconds
       setTimeout(() => {
         logger.error('Forced shutdown due to timeout');
         process.exit(1);
@@ -280,7 +264,6 @@ class ListenerService {
     process.on('SIGINT', gracefulShutdown);
   }
 
-  // Get current service status
   getStatus() {
     return {
       port: this.port,
@@ -291,7 +274,6 @@ class ListenerService {
   }
 }
 
-// Start the listener service if this file is run directly
 if (require.main === module) {
   const port = process.env.LISTENER_PORT || 3001;
   const listenerService = new ListenerService(port);

@@ -9,9 +9,9 @@ class EmitterService {
     this.socket = null;
     this.intervalId = null;
     this.isConnected = false;
-    this.messageInterval = 10000; // send messages every 10 seconds
+    this.messageInterval = 10000; 
     this.reconnectAttempts = 0;
-    this.maxReconnectAttempts = 10; // give up after 10 attempts
+    this.maxReconnectAttempts = 10; 
     this.reconnectInterval = 5000;
   }
 
