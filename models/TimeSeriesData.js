@@ -32,7 +32,7 @@ const MessageRecordSchema = new mongoose.Schema({
   }
 }, { _id: false }); // Disable _id for sub-documents to save space
 
-// Main time-series document schema
+// Main time series document schema
 const TimeSeriesDataSchema = new mongoose.Schema({
   minuteBucket: {
     type: String,

@@ -1,0 +1,600 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Syook Live Message Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #fbbf24 0%, #a855f7 100%);
+      min-height: 100vh;
+      color: #1a202c;
+      padding-bottom: 20px;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      color: #1a202c;
+      padding: 20px 24px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fbbf24 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: #f7fafc;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #888;
+      animation: pulse 2s infinite;
+    }
+
+    .status-dot.live {
+      background: #10b981;
+    }
+
+    .status-dot.connecting {
+      background: #f59e0b;
+    }
+
+    .status-dot.disconnected {
+      background: #ef4444;
+      animation: none;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .success-rate {
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-left: 4px solid;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .stat-card.received {
+      border-left-color: #3b82f6;
+    }
+
+    .stat-card.saved {
+      border-left-color: #10b981;
+    }
+
+    .stat-card.invalid {
+      border-left-color: #ef4444;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stat-value {
+      font-weight: 700;
+      font-size: 32px;
+      color: #1a202c;
+      line-height: 1;
+    }
+
+    .data-section {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #f1f5f9;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a202c;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .live-indicator {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    #list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bucket-card {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+      animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .bucket-card:hover {
+      border-color: #a855f7;
+      box-shadow: 0 4px 8px rgba(168, 85, 247, 0.2);
+    }
+
+    .bucket-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .bucket-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a202c;
+    }
+
+    .bucket-count {
+      padding: 4px 12px;
+      background: linear-gradient(135deg, #fbbf24 0%, #a855f7 100%);
+      color: white;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .records-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .record-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: white;
+      border-radius: 8px;
+      border-left: 3px solid #a855f7;
+      transition: all 0.2s;
+    }
+
+    .record-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .record-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #fbbf24 0%, #a855f7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .record-details {
+      flex: 1;
+    }
+
+    .record-name {
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 4px;
+    }
+
+    .record-route {
+      font-size: 13px;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .route-arrow {
+      color: #a855f7;
+      font-weight: 700;
+    }
+
+    .record-time {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    .more-records {
+      text-align: center;
+      padding: 12px;
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .placeholder {
+      text-align: center;
+      padding: 40px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #94a3b8;
+    }
+
+    .empty-state-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 16px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Syook Live Message Dashboard</h1>
+    <div class="header-right">
+      <div class="status-badge">
+        <span id="statusDot" class="status-dot connecting"></span>
+        <span id="statusText">Connecting...</span>
+      </div>
+      <div id="rate" class="success-rate">Success: --%</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card received">
+        <div class="stat-label">Total Received</div>
+        <div id="totalReceived" class="stat-value">--</div>
+      </div>
+      <div class="stat-card saved">
+        <div class="stat-label">Total Saved</div>
+        <div id="totalSaved" class="stat-value">--</div>
+      </div>
+      <div class="stat-card invalid">
+        <div class="stat-label">Invalid</div>
+        <div id="totalInvalid" class="stat-value">--</div>
+      </div>
+    </div>
+
+    <div class="data-section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="live-indicator"></span>
+          Recent Messages
+        </div>
+      </div>
+      <div id="list" aria-live="polite">
+        <div class="placeholder">Loading data...</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script>
+    const LISTENER_PORT = 3001;
+    const socket = io(`http://localhost:${LISTENER_PORT}`, {
+      query: { type: 'frontend' }
+    });
+
+    let currentStats = null;
+    let currentRecentData = [];
+
+    socket.on('connect', () => {
+      console.log('Connected to listener service');
+      const dot = document.getElementById('statusDot');
+      dot.className = 'status-dot live';
+      document.getElementById('statusText').textContent = 'Live';
+      document.getElementById('list').innerHTML = '<div class="placeholder">Connected, waiting for data...</div>';
+    });
+
+    socket.on('disconnect', () => {
+      console.log('Disconnected from listener service');
+      const dot = document.getElementById('statusDot');
+      dot.className = 'status-dot disconnected';
+      document.getElementById('statusText').textContent = 'Disconnected';
+      document.getElementById('list').innerHTML = '<div class="placeholder">Disconnected. Reconnecting...</div>';
+    });
+
+    socket.on('connect_error', () => {
+      const dot = document.getElementById('statusDot');
+      dot.className = 'status-dot connecting';
+      document.getElementById('statusText').textContent = 'Connecting...';
+    });
+
+    socket.on('stats_update', (data) => {
+      currentStats = data.processingStats;
+      renderStats({ processingStats: currentStats });
+    });
+
+    socket.on('data_update', (data) => {
+      currentRecentData = data.recentData || [];
+      renderRecent(currentRecentData);
+    });
+
+    function renderStats(stats) {
+      if (!stats) return;
+      const p = stats.processingStats || {};
+
+      document.getElementById('totalReceived').textContent = (p.totalReceived ?? 0).toLocaleString();
+      document.getElementById('totalSaved').textContent = (p.totalSaved ?? 0).toLocaleString();
+      animateValue('totalInvalid', p.totalInvalid ?? 0);
+
+      const rate = p.totalReceived ? Math.round((p.totalSaved / p.totalReceived) * 100) : 0;
+      document.getElementById('rate').textContent = `Success: ${rate}%`;
+    }
+
+    function animateValue(id, target) {
+      const element = document.getElementById(id);
+      const current = parseInt(element.textContent) || 0;
+      if (current === target) return;
+
+      const increment = target > current ? 1 : -1;
+      const duration = 500;
+      const steps = Math.abs(target - current);
+      const stepDuration = duration / steps;
+
+      let currentValue = current;
+      const timer = setInterval(() => {
+        currentValue += increment;
+        element.textContent = currentValue.toLocaleString();
+        if (currentValue === target) {
+          clearInterval(timer);
+        }
+      }, stepDuration);
+    }
+
+    function getInitials(name) {
+      return name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+    }
+
+    function renderRecent(list) {
+      const container = document.getElementById('list');
+      container.innerHTML = '';
+
+      if (!list || !list.length) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon"></div>
+            <div>No recent data available</div>
+          </div>
+        `;
+        return;
+      }
+
+      list.forEach(doc => {
+        const bucket = document.createElement('div');
+        bucket.className = 'bucket-card';
+
+        const header = document.createElement('div');
+        header.className = 'bucket-header';
+
+        const title = document.createElement('div');
+        title.className = 'bucket-title';
+        const time = new Date(doc.timestamp || doc.minuteBucket).toLocaleString();
+        title.textContent = time;
+
+        const count = document.createElement('div');
+        count.className = 'bucket-count';
+        count.textContent = `${doc.recordCount || 0} messages`;
+
+        header.appendChild(title);
+        header.appendChild(count);
+        bucket.appendChild(header);
+
+        const recordsList = document.createElement('div');
+        recordsList.className = 'records-list';
+
+        const sample = doc.records || [];
+        sample.slice(0, 5).forEach(r => {
+          const record = document.createElement('div');
+          record.className = 'record-item';
+
+          const icon = document.createElement('div');
+          icon.className = 'record-icon';
+          icon.textContent = getInitials(r.name);
+
+          const details = document.createElement('div');
+          details.className = 'record-details';
+
+          const name = document.createElement('div');
+          name.className = 'record-name';
+          name.textContent = r.name;
+
+          const route = document.createElement('div');
+          route.className = 'record-route';
+          route.innerHTML = `
+            <span>${r.origin}</span>
+            <span class="route-arrow">→</span>
+            <span>${r.destination}</span>
+          `;
+
+          const timeEl = document.createElement('div');
+          timeEl.className = 'record-time';
+          if (r.timestamp) {
+            timeEl.textContent = new Date(r.timestamp).toLocaleTimeString();
+          }
+
+          details.appendChild(name);
+          details.appendChild(route);
+          details.appendChild(timeEl);
+
+          record.appendChild(icon);
+          record.appendChild(details);
+          recordsList.appendChild(record);
+        });
+
+        if (sample.length > 5) {
+          const more = document.createElement('div');
+          more.className = 'more-records';
+          more.textContent = `+ ${sample.length - 5} more messages`;
+          recordsList.appendChild(more);
+        }
+
+        bucket.appendChild(recordsList);
+        container.appendChild(bucket);
+      });
+    }
+
+    // Initial fetch via HTTP (fallback)
+    async function initialLoad() {
+      try {
+        const [statsRes, recentRes] = await Promise.all([
+          fetch(`http://localhost:${LISTENER_PORT}/stats`),
+          fetch(`http://localhost:${LISTENER_PORT}/recent-data?limit=6`)
+        ]);
+        const stats = await statsRes.json();
+        const recent = await recentRes.json();
+        renderStats(stats);
+        renderRecent(recent);
+      } catch (e) {
+        console.error('Initial load failed:', e);
+        document.getElementById('list').innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon"></div>
+            <div>Unable to connect to server</div>
+            <div style="font-size: 12px; margin-top: 8px;">Make sure the listener service is running on port ${LISTENER_PORT}</div>
+          </div>
+        `;
+      }
+    }
+
+    // Load initial data
+    initialLoad();
+  </script>
+</body>
+
+</html>

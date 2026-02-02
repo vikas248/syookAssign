@@ -43,7 +43,7 @@ app.use(cors({
 // Routes
 app.use('/api/auth', require('./routes/allRoutes/index'));
 
-// Root route - serve frontend index
+// Root route serve frontend index
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
