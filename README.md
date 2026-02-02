@@ -10,6 +10,8 @@ I created two services that communicate via Socket.IO:
 
 **Listener** - receives encrypted streams, decrypts each message, validates the hash to ensure data wasn't tampered with, and stores valid messages in MongoDB with timestamps.
 
+**Frontned** - All the valid data saved is displayed in a real-time manner along with the success rate for data transmission and decoding.
+
 The data gets organized in a time-series schema where each document represents a minute and contains all messages received in that timeframe for efficient querying.
 
 ## Running the system
@@ -44,6 +46,11 @@ NODE_ENV=development
 4. Run both services:
 ```bash
 npm run services
+```
+
+5. Run Frontend:
+```bash
+npm start
 ```
 
 Or run separately:
@@ -89,28 +96,6 @@ curl http://localhost:3001/recent-data?limit=5
 
 ```
 
-Expected responses:
-```json
-// Health check response
-{
-  "status": "healthy",
-  "service": "listener", 
-  "connectedEmitters": 1,
-  "uptime": 245.123
-}
-
-// Stats response  
-{
-  "processingStats": {
-    "totalReceived": 1247,
-    "totalProcessed": 1247,
-    "totalValid": 1245,
-    "totalInvalid": 2,
-    "totalSaved": 1245
-  },
-  "connectedEmitters": [...]
-}
-```
 
 Or just open these URLs in your browser.
 
@@ -126,10 +111,10 @@ Should see all tests pass for encryption/decryption, hashing, and message valida
 ## Configuration
 
 Environment variables in `.env`:
-- `MONGO_URI` - MongoDB connection string
-- `LISTENER_PORT` - Port for listener service (default 3001)
-- `ENCRYPTION_KEY` - 32-char key for AES encryption
-- `NODE_ENV` - Environment mode
+`MONGO_URI` - MongoDB connection string
+`LISTENER_PORT` - Port for listener service (default 3001)
+`ENCRYPTION_KEY` - 32-char key for AES encryption
+`NODE_ENV` - Environment mode
 
 ## Technical details
 
