@@ -21,6 +21,7 @@ class ListenerService {
     });
     
     this.connectedEmitters = new Map();
+    this.frontendClients = new Set();
     this.processingStats = {
       totalReceived: 0,
       totalProcessed: 0,
@@ -76,23 +77,44 @@ class ListenerService {
 
   setupSocketHandlers() {
     this.io.on('connection', (socket) => {
-      logger.info(`New emitter connected: ${socket.id} from ${socket.handshake.address}`);
+      const userAgent = socket.handshake.headers['user-agent'] || '';
+      const isFrontend = userAgent.includes('Mozilla') || socket.handshake.query.type === 'frontend';
       
-      this.connectedEmitters.set(socket.id, {
-        connectedAt: new Date().toISOString(),
-        address: socket.handshake.address,
-        messagesReceived: 0,
-        lastMessageAt: null
-      });
+      if (isFrontend) {
+        // Frontend client connection
+        logger.info(`Frontend client connected: ${socket.id}`);
+        this.frontendClients.add(socket.id);
+        
+        // Send initial stats
+        socket.emit('stats_update', {
+          processingStats: this.processingStats,
+          timestamp: new Date().toISOString()
+        });
+        
+        socket.on('disconnect', () => {
+          logger.info(`Frontend client disconnected: ${socket.id}`);
+          this.frontendClients.delete(socket.id);
+        });
+      } else {
+        // Emitter connection
+        logger.info(`New emitter connected: ${socket.id} from ${socket.handshake.address}`);
+        
+        this.connectedEmitters.set(socket.id, {
+          connectedAt: new Date().toISOString(),
+          address: socket.handshake.address,
+          messagesReceived: 0,
+          lastMessageAt: null
+        });
 
-      socket.on('encrypted_message_stream', async (data) => {
-        await this.handleMessageStream(socket, data);
-      });
+        socket.on('encrypted_message_stream', async (data) => {
+          await this.handleMessageStream(socket, data);
+        });
 
-      socket.on('disconnect', (reason) => {
-        logger.info(`Emitter disconnected: ${socket.id}, reason: ${reason}`);
-        this.connectedEmitters.delete(socket.id);
-      });
+        socket.on('disconnect', (reason) => {
+          logger.info(`Emitter disconnected: ${socket.id}, reason: ${reason}`);
+          this.connectedEmitters.delete(socket.id);
+        });
+      }
 
       socket.on('error', (error) => {
         logger.error(`Socket error from ${socket.id}:`, error.message);
@@ -167,6 +189,14 @@ class ListenerService {
       });
 
       socket.emit('message_received', results);
+      
+      // Broadcast stats update to all frontend clients
+      this.broadcastStatsUpdate();
+      
+      // If we saved data, fetch and broadcast recent data
+      if (results.savedCount > 0) {
+        this.broadcastRecentData();
+      }
 
     } catch (error) {
       logger.error('Failed to handle message stream:', error.message);
@@ -264,10 +294,38 @@ class ListenerService {
     process.on('SIGINT', gracefulShutdown);
   }
 
+  broadcastStatsUpdate() {
+    if (this.frontendClients.size > 0) {
+      this.io.emit('stats_update', {
+        processingStats: this.processingStats,
+        timestamp: new Date().toISOString()
+      });
+    }
+  }
+
+  async broadcastRecentData() {
+    try {
+      const recentData = await TimeSeriesData.find()
+        .sort({ timestamp: -1 })
+        .limit(5)
+        .select('minuteBucket timestamp recordCount routes nameFrequency records');
+      
+      if (this.frontendClients.size > 0) {
+        this.io.emit('data_update', {
+          recentData,
+          timestamp: new Date().toISOString()
+        });
+      }
+    } catch (error) {
+      logger.error('Failed to broadcast recent data:', error.message);
+    }
+  }
+
   getStatus() {
     return {
       port: this.port,
       connectedEmitters: this.connectedEmitters.size,
+      frontendClients: this.frontendClients.size,
       processingStats: this.processingStats,
       uptime: process.uptime()
     };

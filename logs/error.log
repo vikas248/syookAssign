@@ -4025,3 +4025,15 @@
 {"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-01 15:08:38"}
 {"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-01 15:12:08"}
 {"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-01 15:15:37"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-02 11:32:27"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-02 11:34:30"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-02 11:34:55"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-02 11:37:30"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-02 11:40:57"}
+{"level":"error","message":"Forced shutdown due to timeout","service":"syook-assignment","timestamp":"2026-02-02 11:43:53"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-02 11:50:08"}
+{"level":"error","message":"Forced shutdown due to timeout","service":"syook-assignment","timestamp":"2026-02-02 11:53:00"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-02 12:00:21"}
+{"level":"error","message":"Forced shutdown due to timeout","service":"syook-assignment","timestamp":"2026-02-02 12:05:19"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-02 12:14:22"}
+{"level":"error","message":"Forced shutdown due to timeout","service":"syook-assignment","timestamp":"2026-02-02 12:15:48"}
