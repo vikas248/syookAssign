@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const logger = require('./logger');
 
-const ALGORITHM = 'aes-256-ctr';
+const ALGORITHM = 'aes-256-ctr'; 
 const SECRET_KEY = process.env.ENCRYPTION_KEY || 'syook-default-secret-key-32chars!!'; 
 const IV_LENGTH = 16; // AES block size
 

@@ -6504,3 +6504,228 @@
 {"level":"info","message":"Message stream sent in 4307ms","service":"syook-assignment","timestamp":"2026-02-02 13:05:43"}
 {"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 179 messages","service":"syook-assignment","timestamp":"2026-02-02 13:05:43"}
 {"level":"info","message":"Parsed 179 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:05:43"}
+{"level":"info","message":"Generating 107 messages","service":"syook-assignment","timestamp":"2026-02-02 13:05:49"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 23963ms:","processed":309,"saved":309,"service":"syook-assignment","timestamp":"2026-02-02 13:05:50","valid":309}
+{"level":"info","message":"Created message stream with 107 messages, total length: 35063 characters","service":"syook-assignment","timestamp":"2026-02-02 13:05:52"}
+{"level":"info","message":"Sending message stream with 107 messages","service":"syook-assignment","timestamp":"2026-02-02 13:05:52"}
+{"level":"info","message":"Message stream sent in 2661ms","service":"syook-assignment","timestamp":"2026-02-02 13:05:52"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":309,"processedCount":309,"service":"syook-assignment","timestamp":"2026-02-02T07:35:50.691Z","validCount":309}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 107 messages","service":"syook-assignment","timestamp":"2026-02-02 13:05:52"}
+{"level":"info","message":"Parsed 107 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:05:52"}
+{"level":"info","message":"Frontend client connected: UrJ2EA-TJnGRkhLaAAAH","service":"syook-assignment","timestamp":"2026-02-02 13:05:57"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 24198ms:","processed":237,"saved":237,"service":"syook-assignment","timestamp":"2026-02-02 13:05:59","valid":237}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":237,"processedCount":237,"service":"syook-assignment","timestamp":"2026-02-02T07:35:59.321Z","validCount":237}
+{"level":"info","message":"Generating 141 messages","service":"syook-assignment","timestamp":"2026-02-02 13:05:59"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 18421ms:","processed":179,"saved":179,"service":"syook-assignment","timestamp":"2026-02-02 13:06:02","valid":179}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 10222ms:","processed":107,"saved":107,"service":"syook-assignment","timestamp":"2026-02-02 13:06:02","valid":107}
+{"level":"info","message":"Created message stream with 141 messages, total length: 46165 characters","service":"syook-assignment","timestamp":"2026-02-02 13:06:02"}
+{"level":"info","message":"Sending message stream with 141 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:02"}
+{"level":"info","message":"Message stream sent in 3383ms","service":"syook-assignment","timestamp":"2026-02-02 13:06:02"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 141 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:02"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":179,"processedCount":179,"service":"syook-assignment","timestamp":"2026-02-02T07:36:02.123Z","validCount":179}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":107,"processedCount":107,"service":"syook-assignment","timestamp":"2026-02-02T07:36:02.275Z","validCount":107}
+{"level":"info","message":"Parsed 141 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:06:02"}
+{"level":"info","message":"Frontend client disconnected: UrJ2EA-TJnGRkhLaAAAH","service":"syook-assignment","timestamp":"2026-02-02 13:06:06"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 4283ms:","processed":141,"saved":141,"service":"syook-assignment","timestamp":"2026-02-02 13:06:07","valid":141}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":141,"processedCount":141,"service":"syook-assignment","timestamp":"2026-02-02T07:36:07.053Z","validCount":141}
+{"level":"info","message":"Generating 125 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:09"}
+{"level":"info","message":"Created message stream with 125 messages, total length: 41057 characters","service":"syook-assignment","timestamp":"2026-02-02 13:06:12"}
+{"level":"info","message":"Sending message stream with 125 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:12"}
+{"level":"info","message":"Message stream sent in 2860ms","service":"syook-assignment","timestamp":"2026-02-02 13:06:12"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 125 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:12"}
+{"level":"info","message":"Parsed 125 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:06:12"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 4105ms:","processed":125,"saved":125,"service":"syook-assignment","timestamp":"2026-02-02 13:06:16","valid":125}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":125,"processedCount":125,"service":"syook-assignment","timestamp":"2026-02-02T07:36:16.354Z","validCount":125}
+{"level":"info","message":"Generating 248 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:19"}
+{"level":"info","message":"Created message stream with 248 messages, total length: 81521 characters","service":"syook-assignment","timestamp":"2026-02-02 13:06:25"}
+{"level":"info","message":"Sending message stream with 248 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:25"}
+{"level":"info","message":"Message stream sent in 5626ms","service":"syook-assignment","timestamp":"2026-02-02 13:06:25"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 248 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:25"}
+{"level":"info","message":"Parsed 248 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:06:25"}
+{"level":"info","message":"Generating 310 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:29"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 9385ms:","processed":248,"saved":248,"service":"syook-assignment","timestamp":"2026-02-02 13:06:34","valid":248}
+{"level":"info","message":"Created message stream with 310 messages, total length: 101723 characters","service":"syook-assignment","timestamp":"2026-02-02 13:06:36"}
+{"level":"info","message":"Sending message stream with 310 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:36"}
+{"level":"info","message":"Message stream sent in 7243ms","service":"syook-assignment","timestamp":"2026-02-02 13:06:36"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":248,"processedCount":248,"service":"syook-assignment","timestamp":"2026-02-02T07:36:34.400Z","validCount":248}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 310 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:36"}
+{"level":"info","message":"Parsed 310 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:06:36"}
+{"level":"info","message":"Generating 313 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:39"}
+{"level":"info","message":"Created message stream with 313 messages, total length: 102735 characters","service":"syook-assignment","timestamp":"2026-02-02 13:06:46"}
+{"level":"info","message":"Sending message stream with 313 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:46"}
+{"level":"info","message":"Message stream sent in 7427ms","service":"syook-assignment","timestamp":"2026-02-02 13:06:46"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 313 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:46"}
+{"level":"info","message":"Parsed 313 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:06:46"}
+{"level":"info","message":"Generating 148 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:49"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 15697ms:","processed":310,"saved":310,"service":"syook-assignment","timestamp":"2026-02-02 13:06:52","valid":310}
+{"level":"info","message":"Created message stream with 148 messages, total length: 48519 characters","service":"syook-assignment","timestamp":"2026-02-02 13:06:52"}
+{"level":"info","message":"Sending message stream with 148 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:52"}
+{"level":"info","message":"Message stream sent in 3597ms","service":"syook-assignment","timestamp":"2026-02-02 13:06:52"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":310,"processedCount":310,"service":"syook-assignment","timestamp":"2026-02-02T07:36:52.331Z","validCount":310}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 148 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:52"}
+{"level":"info","message":"Parsed 148 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:06:52"}
+{"level":"info","message":"Generating 415 messages","service":"syook-assignment","timestamp":"2026-02-02 13:06:59"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 10276ms:","processed":148,"saved":148,"service":"syook-assignment","timestamp":"2026-02-02 13:07:03","valid":148}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 18892ms:","processed":313,"saved":313,"service":"syook-assignment","timestamp":"2026-02-02 13:07:05","valid":313}
+{"level":"info","message":"Created message stream with 415 messages, total length: 136237 characters","service":"syook-assignment","timestamp":"2026-02-02 13:07:09"}
+{"level":"info","message":"Sending message stream with 415 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:09"}
+{"level":"info","message":"Message stream sent in 9870ms","service":"syook-assignment","timestamp":"2026-02-02 13:07:09"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":148,"processedCount":148,"service":"syook-assignment","timestamp":"2026-02-02T07:37:03.267Z","validCount":148}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":313,"processedCount":313,"service":"syook-assignment","timestamp":"2026-02-02T07:37:05.713Z","validCount":313}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 415 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:09"}
+{"level":"info","message":"Parsed 415 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:07:09"}
+{"level":"info","message":"Generating 212 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:09"}
+{"level":"info","message":"Created message stream with 212 messages, total length: 69545 characters","service":"syook-assignment","timestamp":"2026-02-02 13:07:14"}
+{"level":"info","message":"Sending message stream with 212 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:14"}
+{"level":"info","message":"Message stream sent in 5040ms","service":"syook-assignment","timestamp":"2026-02-02 13:07:14"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 212 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:14"}
+{"level":"info","message":"Parsed 212 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:07:14"}
+{"level":"info","message":"Generating 386 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:19"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 14068ms:","processed":212,"saved":212,"service":"syook-assignment","timestamp":"2026-02-02 13:07:28","valid":212}
+{"level":"info","message":"Created message stream with 386 messages, total length: 126719 characters","service":"syook-assignment","timestamp":"2026-02-02 13:07:28"}
+{"level":"info","message":"Sending message stream with 386 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:28"}
+{"level":"info","message":"Message stream sent in 9402ms","service":"syook-assignment","timestamp":"2026-02-02 13:07:28"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":212,"processedCount":212,"service":"syook-assignment","timestamp":"2026-02-02T07:37:28.503Z","validCount":212}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 386 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:28"}
+{"level":"info","message":"Parsed 386 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:07:28"}
+{"level":"info","message":"Generating 355 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:29"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 23093ms:","processed":415,"saved":415,"service":"syook-assignment","timestamp":"2026-02-02 13:07:32","valid":415}
+{"level":"info","message":"Created message stream with 355 messages, total length: 116301 characters","service":"syook-assignment","timestamp":"2026-02-02 13:07:40"}
+{"level":"info","message":"Sending message stream with 355 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:40"}
+{"level":"info","message":"Message stream sent in 11094ms","service":"syook-assignment","timestamp":"2026-02-02 13:07:40"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 355 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:40"}
+{"level":"info","message":"Parsed 355 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:07:40"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":415,"processedCount":415,"service":"syook-assignment","timestamp":"2026-02-02T07:37:32.357Z","validCount":415}
+{"level":"info","message":"Generating 268 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:40"}
+{"level":"info","message":"Created message stream with 268 messages, total length: 87991 characters","service":"syook-assignment","timestamp":"2026-02-02 13:07:49"}
+{"level":"info","message":"Sending message stream with 268 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:49"}
+{"level":"info","message":"Message stream sent in 8613ms","service":"syook-assignment","timestamp":"2026-02-02 13:07:49"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 268 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:49"}
+{"level":"info","message":"Parsed 268 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:07:49"}
+{"level":"info","message":"Generating 63 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:50"}
+{"level":"info","message":"Created message stream with 63 messages, total length: 20641 characters","service":"syook-assignment","timestamp":"2026-02-02 13:07:52"}
+{"level":"info","message":"Sending message stream with 63 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:52"}
+{"level":"info","message":"Message stream sent in 1937ms","service":"syook-assignment","timestamp":"2026-02-02 13:07:52"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 63 messages","service":"syook-assignment","timestamp":"2026-02-02 13:07:52"}
+{"level":"info","message":"Parsed 63 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:07:52"}
+{"level":"info","message":"Generating 228 messages","service":"syook-assignment","timestamp":"2026-02-02 13:08:00"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 9232ms:","processed":63,"saved":63,"service":"syook-assignment","timestamp":"2026-02-02 13:08:01","valid":63}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 36679ms:","processed":386,"saved":386,"service":"syook-assignment","timestamp":"2026-02-02 13:08:05","valid":386}
+{"level":"info","message":"Created message stream with 228 messages, total length: 74957 characters","service":"syook-assignment","timestamp":"2026-02-02 13:08:07"}
+{"level":"info","message":"Sending message stream with 228 messages","service":"syook-assignment","timestamp":"2026-02-02 13:08:07"}
+{"level":"info","message":"Message stream sent in 6921ms","service":"syook-assignment","timestamp":"2026-02-02 13:08:07"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":63,"processedCount":63,"service":"syook-assignment","timestamp":"2026-02-02T07:38:01.666Z","validCount":63}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":386,"processedCount":386,"service":"syook-assignment","timestamp":"2026-02-02T07:38:05.477Z","validCount":386}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 228 messages","service":"syook-assignment","timestamp":"2026-02-02 13:08:07"}
+{"level":"info","message":"Parsed 228 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:08:07"}
+{"level":"info","message":"Generating 478 messages","service":"syook-assignment","timestamp":"2026-02-02 13:08:10"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 31384ms:","processed":268,"saved":268,"service":"syook-assignment","timestamp":"2026-02-02 13:08:20","valid":268}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 40798ms:","processed":355,"saved":355,"service":"syook-assignment","timestamp":"2026-02-02 13:08:21","valid":355}
+{"level":"info","message":"Created message stream with 478 messages, total length: 156815 characters","service":"syook-assignment","timestamp":"2026-02-02 13:08:25"}
+{"level":"info","message":"Sending message stream with 478 messages","service":"syook-assignment","timestamp":"2026-02-02 13:08:25"}
+{"level":"info","message":"Message stream sent in 14916ms","service":"syook-assignment","timestamp":"2026-02-02 13:08:25"}
+{"level":"info","message":"Got message stream from nXr1ankrbAzdw3ObAAAB with 478 messages","service":"syook-assignment","timestamp":"2026-02-02 13:08:25"}
+{"level":"info","message":"Parsed 478 messages from stream","service":"syook-assignment","timestamp":"2026-02-02 13:08:25"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 19571ms:","processed":228,"saved":228,"service":"syook-assignment","timestamp":"2026-02-02 13:08:26","valid":228}
+{"level":"info","message":"Received shutdown signal, closing server gracefully...","service":"syook-assignment","timestamp":"2026-02-02 13:08:30"}
+{"level":"info","message":"Received shutdown signal, closing server gracefully...","service":"syook-assignment","timestamp":"2026-02-02 13:08:30"}
+{"level":"info","message":"Received shutdown signal, closing server gracefully...","service":"syook-assignment","timestamp":"2026-02-02 13:08:30"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":268,"processedCount":268,"service":"syook-assignment","timestamp":"2026-02-02T07:38:20.488Z","validCount":268}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":355,"processedCount":355,"service":"syook-assignment","timestamp":"2026-02-02T07:38:21.294Z","validCount":355}
+{"level":"info","message":"Generating 358 messages","service":"syook-assignment","timestamp":"2026-02-02 13:08:25"}
+{"level":"info","message":"Created message stream with 358 messages, total length: 117635 characters","service":"syook-assignment","timestamp":"2026-02-02 13:08:36"}
+{"level":"info","message":"Sending message stream with 358 messages","service":"syook-assignment","timestamp":"2026-02-02 13:08:36"}
+{"level":"info","message":"Message stream sent in 11170ms","service":"syook-assignment","timestamp":"2026-02-02 13:08:36"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":228,"processedCount":228,"service":"syook-assignment","timestamp":"2026-02-02T07:38:26.990Z","validCount":228}
+{"level":"info","message":"Emitter disconnected: nXr1ankrbAzdw3ObAAAB, reason: client namespace disconnect","service":"syook-assignment","timestamp":"2026-02-02 13:08:36"}
+{"level":"info","message":"HTTP server closed","service":"syook-assignment","timestamp":"2026-02-02 13:08:36"}
+{"level":"info","message":"Server running on port 8000","service":"syook-assignment","timestamp":"2026-02-03 11:58:23"}
+{"level":"info","message":"MongoDB connected","service":"syook-assignment","timestamp":"2026-02-03 11:58:23"}
+{"level":"info","message":"Starting Emitter Service - connecting to http://localhost:3001","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"0":"x","1":"h","10":"r","11":"r","12":"o","13":"r","2":"r","3":" ","4":"p","5":"o","6":"l","7":"l","8":" ","9":"e","level":"error","message":"Socket connection error:","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"level":"info","message":"Scheduling reconnection attempt 1/10 in 5 seconds","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"level":"info","message":"MongoDB connected","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"level":"info","message":"MongoDB connected successfully","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"level":"info","message":"Listener Service started on port 3001","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"level":"info","message":"Socket.IO server ready to accept connections","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"level":"info","message":"Health check available at http://localhost:3001/health","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"level":"info","message":"Statistics available at http://localhost:3001/stats","service":"syook-assignment","timestamp":"2026-02-03 11:58:42"}
+{"level":"info","message":"Reconnection attempt 1...","service":"syook-assignment","timestamp":"2026-02-03 11:58:47"}
+{"level":"info","message":"New emitter connected: dgZ52mBqG5ymW3fpAAAB from ::1","service":"syook-assignment","timestamp":"2026-02-03 11:58:47"}
+{"level":"info","message":"Connected to Listener Service at http://localhost:3001","service":"syook-assignment","timestamp":"2026-02-03 11:58:47"}
+{"0":"d","1":"g","10":"y","11":"m","12":"W","13":"3","14":"f","15":"p","16":"A","17":"A","18":"A","19":"B","2":"Z","3":"5","4":"2","5":"m","6":"B","7":"q","8":"G","9":"5","level":"info","message":"Socket ID:","service":"syook-assignment","timestamp":"2026-02-03 11:58:47"}
+{"level":"info","message":"Starting periodic messaging every 10 seconds","service":"syook-assignment","timestamp":"2026-02-03 11:58:47"}
+{"level":"info","message":"Generating 293 messages","service":"syook-assignment","timestamp":"2026-02-03 11:58:47"}
+{"level":"info","message":"Loaded data: 50 names, 40 origins, 48 destinations","service":"syook-assignment","timestamp":"2026-02-03 11:58:47"}
+{"level":"info","message":"Created message stream with 293 messages, total length: 96059 characters","service":"syook-assignment","timestamp":"2026-02-03 11:58:53"}
+{"level":"info","message":"Sending message stream with 293 messages","service":"syook-assignment","timestamp":"2026-02-03 11:58:53"}
+{"level":"info","message":"Message stream sent in 6375ms","service":"syook-assignment","timestamp":"2026-02-03 11:58:53"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 293 messages","service":"syook-assignment","timestamp":"2026-02-03 11:58:53"}
+{"level":"info","message":"Parsed 293 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 11:58:53"}
+{"level":"info","message":"Frontend client connected: 5I2asnaXwM_sp5tYAAAD","service":"syook-assignment","timestamp":"2026-02-03 11:58:54"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 8348ms:","processed":293,"saved":293,"service":"syook-assignment","timestamp":"2026-02-03 11:59:02","valid":293}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":293,"processedCount":293,"service":"syook-assignment","timestamp":"2026-02-03T06:29:02.258Z","validCount":293}
+{"level":"info","message":"Generating 195 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:03"}
+{"level":"info","message":"Created message stream with 195 messages, total length: 64173 characters","service":"syook-assignment","timestamp":"2026-02-03 11:59:08"}
+{"level":"info","message":"Sending message stream with 195 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:08"}
+{"level":"info","message":"Message stream sent in 4198ms","service":"syook-assignment","timestamp":"2026-02-03 11:59:08"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 195 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:08"}
+{"level":"info","message":"Parsed 195 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 11:59:08"}
+{"level":"info","message":"Generating 162 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:13"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 5893ms:","processed":195,"saved":195,"service":"syook-assignment","timestamp":"2026-02-03 11:59:14","valid":195}
+{"level":"info","message":"Created message stream with 162 messages, total length: 53349 characters","service":"syook-assignment","timestamp":"2026-02-03 11:59:17"}
+{"level":"info","message":"Sending message stream with 162 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:17"}
+{"level":"info","message":"Message stream sent in 3504ms","service":"syook-assignment","timestamp":"2026-02-03 11:59:17"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 162 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:17"}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":195,"processedCount":195,"service":"syook-assignment","timestamp":"2026-02-03T06:29:14.001Z","validCount":195}
+{"level":"info","message":"Parsed 162 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 11:59:17"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 5540ms:","processed":162,"saved":162,"service":"syook-assignment","timestamp":"2026-02-03 11:59:22","valid":162}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":162,"processedCount":162,"service":"syook-assignment","timestamp":"2026-02-03T06:29:22.954Z","validCount":162}
+{"level":"info","message":"Generating 442 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:23"}
+{"level":"info","message":"Created message stream with 442 messages, total length: 145195 characters","service":"syook-assignment","timestamp":"2026-02-03 11:59:33"}
+{"level":"info","message":"Sending message stream with 442 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:33"}
+{"level":"info","message":"Message stream sent in 9636ms","service":"syook-assignment","timestamp":"2026-02-03 11:59:33"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 442 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:33"}
+{"level":"info","message":"Parsed 442 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 11:59:33"}
+{"level":"info","message":"Generating 270 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:33"}
+{"level":"info","message":"Created message stream with 270 messages, total length: 88571 characters","service":"syook-assignment","timestamp":"2026-02-03 11:59:40"}
+{"level":"info","message":"Sending message stream with 270 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:40"}
+{"level":"info","message":"Message stream sent in 6370ms","service":"syook-assignment","timestamp":"2026-02-03 11:59:40"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 270 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:40"}
+{"level":"info","message":"Parsed 270 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 11:59:40"}
+{"level":"info","message":"Generating 387 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:43"}
+{"level":"info","message":"Created message stream with 387 messages, total length: 126897 characters","service":"syook-assignment","timestamp":"2026-02-03 11:59:53"}
+{"level":"info","message":"Sending message stream with 387 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:53"}
+{"level":"info","message":"Message stream sent in 9296ms","service":"syook-assignment","timestamp":"2026-02-03 11:59:53"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 387 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:53"}
+{"level":"info","message":"Parsed 387 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 11:59:53"}
+{"level":"info","message":"Generating 298 messages","service":"syook-assignment","timestamp":"2026-02-03 11:59:53"}
+{"level":"info","message":"Created message stream with 298 messages, total length: 97915 characters","service":"syook-assignment","timestamp":"2026-02-03 12:00:01"}
+{"level":"info","message":"Sending message stream with 298 messages","service":"syook-assignment","timestamp":"2026-02-03 12:00:01"}
+{"level":"info","message":"Message stream sent in 7335ms","service":"syook-assignment","timestamp":"2026-02-03 12:00:01"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 298 messages","service":"syook-assignment","timestamp":"2026-02-03 12:00:01"}
+{"level":"info","message":"Parsed 298 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 12:00:01"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 22289ms:","processed":270,"saved":270,"service":"syook-assignment","timestamp":"2026-02-03 12:00:02","valid":270}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":270,"processedCount":270,"service":"syook-assignment","timestamp":"2026-02-03T06:30:02.571Z","validCount":270}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 29172ms:","processed":442,"saved":442,"service":"syook-assignment","timestamp":"2026-02-03 12:00:02","valid":442}
+{"invalidCount":0,"level":"info","message":"Listener acknowledged message receipt:","messageCount":442,"processedCount":442,"service":"syook-assignment","timestamp":"2026-02-03T06:30:02.719Z","validCount":442}
+{"level":"info","message":"Generating 159 messages","service":"syook-assignment","timestamp":"2026-02-03 12:00:03"}
+{"level":"info","message":"Created message stream with 159 messages, total length: 52107 characters","service":"syook-assignment","timestamp":"2026-02-03 12:00:07"}
+{"level":"info","message":"Sending message stream with 159 messages","service":"syook-assignment","timestamp":"2026-02-03 12:00:07"}
+{"level":"info","message":"Message stream sent in 3829ms","service":"syook-assignment","timestamp":"2026-02-03 12:00:07"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 159 messages","service":"syook-assignment","timestamp":"2026-02-03 12:00:07"}
+{"level":"info","message":"Parsed 159 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 12:00:07"}
+{"level":"info","message":"Generating 110 messages","service":"syook-assignment","timestamp":"2026-02-03 12:00:13"}
+{"level":"info","message":"Created message stream with 110 messages, total length: 36195 characters","service":"syook-assignment","timestamp":"2026-02-03 12:00:16"}
+{"level":"info","message":"Sending message stream with 110 messages","service":"syook-assignment","timestamp":"2026-02-03 12:00:16"}
+{"level":"info","message":"Message stream sent in 2672ms","service":"syook-assignment","timestamp":"2026-02-03 12:00:16"}
+{"level":"info","message":"Got message stream from dgZ52mBqG5ymW3fpAAAB with 110 messages","service":"syook-assignment","timestamp":"2026-02-03 12:00:16"}
+{"level":"info","message":"Parsed 110 messages from stream","service":"syook-assignment","timestamp":"2026-02-03 12:00:16"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"syook-assignment","timestamp":"2026-02-03 12:00:21"}
+{"level":"info","message":"Emitter disconnected: dgZ52mBqG5ymW3fpAAAB, reason: client namespace disconnect","service":"syook-assignment","timestamp":"2026-02-03 12:00:21"}
+{"level":"info","message":"Received shutdown signal, closing server gracefully...","service":"syook-assignment","timestamp":"2026-02-03 12:00:21"}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 16187ms:","processed":159,"saved":159,"service":"syook-assignment","timestamp":"2026-02-03 12:00:23","valid":159}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 26947ms:","processed":298,"saved":298,"service":"syook-assignment","timestamp":"2026-02-03 12:00:28","valid":298}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 12406ms:","processed":110,"saved":110,"service":"syook-assignment","timestamp":"2026-02-03 12:00:29","valid":110}
+{"errors":0,"invalid":0,"level":"info","message":"Processed message stream in 35936ms:","processed":387,"saved":387,"service":"syook-assignment","timestamp":"2026-02-03 12:00:29","valid":387}
+{"level":"error","message":"Forced shutdown due to timeout","service":"syook-assignment","timestamp":"2026-02-03 12:00:31"}

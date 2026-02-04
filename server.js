@@ -12,7 +12,7 @@ const path = require('path');
 app.use(express.json());
 app.use(cookieParser());
 
-// Serve frontend static files
+// Serve frontend
 app.use(express.static(path.join(__dirname, 'frontend')));
 
 connectDB();
@@ -43,7 +43,7 @@ app.use(cors({
 // Routes
 app.use('/api/auth', require('./routes/allRoutes/index'));
 
-// Root route serve frontend index
+// Root for frontend
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
